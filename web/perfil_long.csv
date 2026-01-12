@@ -1,0 +1,21 @@
+factor,categoria,resilente_fac,n,total_grupo,prop
+centro,Concertada,No resilente,1117,6447,0.17325888009927098
+centro,Concertada,Resilente,214,922,0.23210412147505424
+centro,Privada,No resilente,182,6447,0.02823018458197611
+centro,Privada,Resilente,37,922,0.04013015184381779
+centro,Pública,No resilente,5148,6447,0.798510935318753
+centro,Pública,Resilente,671,922,0.7277657266811279
+origen,1ª gen,No resilente,1061,6195,0.17126715092816788
+origen,1ª gen,Resilente,156,917,0.17011995637949837
+origen,2ª gen,No resilente,725,6195,0.11702986279257466
+origen,2ª gen,Resilente,59,917,0.064340239912759
+origen,Nativo,No resilente,4409,6195,0.7117029862792574
+origen,Nativo,Resilente,702,917,0.7655398037077427
+repite,Ha repetido,No resilente,2655,6461,0.41092710106794617
+repite,Ha repetido,Resilente,33,931,0.03544575725026853
+repite,No ha repetido,No resilente,3806,6461,0.5890728989320538
+repite,No ha repetido,Resilente,898,931,0.9645542427497314
+sexo,Chica,No resilente,3224,6482,0.49737735266892935
+sexo,Chica,Resilente,501,931,0.5381310418904404
+sexo,Chico,No resilente,3258,6482,0.5026226473310706
+sexo,Chico,Resilente,430,931,0.46186895810955964

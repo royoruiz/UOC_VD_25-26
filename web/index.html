@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alumnado resiliente PISA 2022</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background: #f9fafb;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+    background: #ffffff;
+  }
+
+  h1, h2 {
+    margin-top: 32px;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto 24px;
+  }
+
+  .buttons { margin-bottom: 10px; }
+  .buttons button {
+    margin-right: 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: #f5f5f5;
+  }
+  .buttons button.active {
+    background: #333;
+    color: white;
+  }
+  .axis text { font-size: 12px; }
+  .legend rect { stroke: #ccc; }
+</style>
+
+</head>
+<body>
+ <div class="container">
+  <h1 style="text-align: center;">Alumnos resilentes PISA 2022</h1>
+  <h1>Algunas características de alumnos resilientes</h1>
+  <p>
+    Distribución de <strong>alumnado desfavorecido</strong> por factor y resiliencia.
+    Se pueden usar los botones para cambiar entre sexo, origen, repetición y tipo de centro.
+  </p>
+
+  <div class="buttons">
+    <button data-factor="sexo"   class="active">Sexo</button>
+    <button data-factor="origen">Origen</button>
+    <button data-factor="repite">Repetición</button>
+    <button data-factor="centro">Tipo de centro</button>
+  </div>
+
+  <svg id="chart" width="800" height="450"></svg>
+  <h2>Disciplina en el aula y uso de recursos digitales</h2>
+<p>
+  Frecuencia de problemas de disciplina (<strong>clima en el aula</strong>) y
+  de distracción por <strong>recursos digitales</strong> en el aula de matemáticas,
+  comparando alumnado desfavorecido resilente y no resilente.
+</p>
+
+
+<label for="item-select">Pregunta:</label>
+<select id="item-select">
+  <optgroup label="Clima en el aula">
+    <option value="ST273Q01JA">No escuchan al profesor/a (Q01)</option>
+    <option value="ST273Q02JA">Ruido en clase (Q02)</option>
+    <option value="ST273Q03JA">El profesor/a espera silencio (Q03)</option>
+    <option value="ST273Q04JA">El alumnado no trabaja (Q04)</option>
+  </optgroup>
+  <optgroup label="Uso de dispositivos digitales en el aula">
+    <option value="ST273Q06JA">Se distraen con recursos digitales (Q06)</option>
+    <option value="ST273Q07JA">Se distraen por recursos digitales de otros (Q07)</option>
+  </optgroup>
+</select>
+
+
+<svg id="likert-chart" width="800" height="250"></svg>
+
+<h2>Sentido de pertenencia y apoyo familiar</h2>
+<p>
+  Comparación del <strong>sentido de pertenencia al centro</strong> (BELONG) y del
+  <strong>soporte familiar percibido</strong> (FAMSUP) entre alumnado desfavorecido
+  resilente y no resilente.
+</p>
+
+<label for="apoyo-select">Índice:</label>
+<select id="apoyo-select">
+  <option value="BELONG">Sentido de pertenencia (BELONG)</option>
+  <option value="FAMSUP">Soporte familiar (FAMSUP)</option>
+</select>
+
+<svg id="apoyo-chart" width="800" height="350"></svg>
+
+<h2>Comunidades autónomas y gasto educativo</h2>
+<p>
+  Porcentaje de alumnado socioeconómicamente desfavorecido resilente en cada comunidad autónoma
+  y su relación con el gasto público en educación por habitante.
+</p>
+
+<svg id="ccaa-map" width="600" height="500"></svg>
+
+<p style="margin-top: 20px;">
+  Relación entre gasto público por habitante y porcentaje de alumnado desfavorecido resilente.
+</p>
+<svg id="ccaa-scatter" width="800" height="350"></svg>
+</div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="app.js"></script>
+</body>
+</html>
